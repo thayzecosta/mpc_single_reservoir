@@ -233,7 +233,7 @@ class Simulation:
                 d = 0
                 w_now = vaz[self.y_initial + t, m]
                 wpred = []
-                for i in range(int(self.h / 12)):
+                for _ in range(int(self.h / 12)):
                     wpred0 = np.concatenate((uhe.w_avg[m:12], uhe.w_avg[0:m]))
                     #*np.concatenate((perc[m:12],perc[0:m])) # inflow weights
                     wpred = np.concatenate((wpred, wpred0))
